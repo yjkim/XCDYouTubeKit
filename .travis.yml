@@ -18,6 +18,7 @@ before_install:
   - xcrun simctl list
 install:
   - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
+  - gem install xcpretty-travis-formatter --no-rdoc --no-ri --no-document --quiet
   - sudo easy_install cpp-coveralls
 script:
   - ./Scripts/run-tests.sh
