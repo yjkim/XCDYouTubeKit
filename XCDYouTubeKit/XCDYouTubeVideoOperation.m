@@ -99,6 +99,8 @@ typedef NS_ENUM(NSUInteger, XCDYouTubeRequestType) {
 	// Max (age-restricted VEVO) = 2×GetVideoInfo + 1×WatchPage + 1×EmbedPage + 1×JavaScriptPlayer + 1×GetVideoInfo
 	if (++self.requestCount > 6)
 	{
+		id value = nil;
+		[@{ @"key": value } self];
 		// This condition should never happen but the request flow is quite complex so better abort here than go into an infinite loop of requests
 		[self finishWithError];
 		return;
